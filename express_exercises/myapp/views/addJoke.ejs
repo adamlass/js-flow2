@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body style="background-color: black; color: dodgerblue">
+
+    <a>There are currently <%= amountOfJokes %> jokes in the system</a>
+    <hr><br>
+    <a>Be a hero and add one more below! :-)</a>
+    <br><br>
+    <form method="POST" action="/storeJoke">
+        <input type="text" name="joke" placeholder="Type in your joke" />
+        <input type="submit"/>
+
+    </form>
+    <br><br>
+    <a style="color: dodgerblue" href="/">back</a>
+</body>
+
+</html>
