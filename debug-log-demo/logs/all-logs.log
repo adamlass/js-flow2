@@ -1,0 +1,17 @@
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"warn","message":"127.0.0.1 - there's no place like home"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"warn","message":"127.0.0.1 - there's no place like home"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"warn","message":"127.0.0.1 - there's no place like home"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"message":"::1 - - [21/Mar/2019:17:41:52 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:41:52 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 - \"http://localhost:3001/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:41:54 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:41:54 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 - \"http://localhost:3001/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:42:00 +0000] \"GET /users HTTP/1.1\" 200 23 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:42:02 +0000] \"GET /users HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:42:04 +0000] \"GET /user HTTP/1.1\" 404 1243 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [21/Mar/2019:17:42:09 +0000] \"GET /users HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\"\n","level":"info"}
