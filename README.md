@@ -1,12 +1,12 @@
 # Period-2 Node.js, Express + JavaScript Backend Testing, NoSQL, MongoDB and Mongoose
 
->**Why would you consider a Scripting Language as JavaScript as your Backend Platform?**
+### **Why would you consider a Scripting Language as JavaScript as your Backend Platform?**
 
 Developing with a scripting language is very simple and easy, there is less overhead and it is also less code intensive.
 
 Also scripting languages like JS and python are generally more modern/used, making it much easier to find help, templates and libraries online. They are also mordern in the sense that many of the libraries and code aspects around SCs consider real-world usage scenarios first, making them much more intuitive.
 
->**Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomcat**
+### **Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomcat**
 
 **pros**
 
@@ -21,11 +21,11 @@ Also scripting languages like JS and python are generally more modern/used, maki
 
 
 
->**Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.**
+### **Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.**
      
 By using a Process manager, you could utilize all cores in the cpu by letting the PM spawn several instances of the server. This of course requires you to make the code compatible in this environment, by handeling sessions on a centered level.
      
->**Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:**
+### **Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:**
 
 To deploy a node server, we would have to:
 
@@ -48,11 +48,11 @@ Use a Process Manager like PM2
 
 This is handled by NGINX
 
->**Explain the difference between “Debug outputs” and application logging. What’s wrong with console.log(..) statements in our backend-code.**
+### **Explain the difference between “Debug outputs” and application logging. What’s wrong with console.log(..) statements in our backend-code.**
 
 Debugging outputs are outputs that are triggred when a debugging enviromental variable is set telling a task to print debug-statements in the terminal. - The point of this is for a developer or administrator to see errors realtime. Logs are written in log files, and their purpose is to log events in the code over time, making it posible to track down errors or hackers in the future. 
 
->**Demonstrate a system using application logging and “coloured” debug statements.**
+### **Demonstrate a system using application logging and “coloured” debug statements.**
 
 **logging**
 
@@ -116,7 +116,7 @@ var debug = require('debug')('debug-log-demo:app');
 ```
 debug-log-demo:app Hello World +3ms
 ```
->**Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript + relevant packages**
+### **Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript + relevant packages**
 
 To test a REST api in a Node application you would need at least 2 things: a testing program (like *mocha*) and a http handler (like *fetch*). To test the code with mocha you have to place your test in a folder called `test` and then use the `decribe` method to initate the test like this:
 
@@ -142,7 +142,7 @@ describe("Test", function () {
 ```
 
 
->**Explain, using relevant examples, the Express concept; middleware.**
+### **Explain, using relevant examples, the Express concept; middleware.**
 
 A middleware in express is a function that gets called whenever the applicating is called. The order of assinging the middlewares defines the sequence that the middlewares are called, making it possible for one middleware to process the data in the request before another middleware gets it. Passing the the server call to the next middleware is done by calling the `next` callback. - Not ending a middleware "transaction" with eighter calling `next` or `req.send(...)` will make the request halt.
 
@@ -155,7 +155,7 @@ app.use(function (req, res, next) {
 });
 ```
 
->**Explain, using relevant examples, how to implement sessions and the legal implications of doing this.**
+### **Explain, using relevant examples, how to implement sessions and the legal implications of doing this.**
 
 ```
 var cookieSession = require('cookie-session')
@@ -172,11 +172,11 @@ app.use(cookieSession({
 
 Using session and cookies without user consent is very illegal due to the new GDPR enforced by the European Union. The law states that any information that together with other information can be linked to a european citizen is personal data. Therefore a session cookie is inherently personal data if its linked to a session containing personal data and must approved by the user with a concent. If consent is not an option, the data kept must be anonymous in its form.
 
->**Compare the express strategy toward (server side) templating with the one you used with Java on second semester.**
+### **Compare the express strategy toward (server side) templating with the one you used with Java on second semester.**
 
 They practically use the same strategy by rendering the imbedded language on serverside. In express there are many options to what imbedding strategy you can use (like ejs), and in java the option is primarily JSX.
 
->**Demonstrate a simple Server Side Rendering example using a technology of your own choice (pug, EJS, ..).**
+### **Demonstrate a simple Server Side Rendering example using a technology of your own choice (pug, EJS, ..).**
 
 `joke.js`
 
@@ -215,7 +215,7 @@ module.exports = router
 </html>
 ```
 
->**Explain, using relevant examples, your strategy for implementing a REST-API with Node/**
+### **Explain, using relevant examples, your strategy for implementing a REST-API with Node/**
 
 To implement a REST API i would make use of express and its router like so:
 ```
@@ -238,7 +238,7 @@ router.get("/jokes", (req,res,next) => {
 })
 ```
 
->**Express and show how you can "test" all the four CRUD operations programmatically using, for example, the Request package.**
+### **Express and show how you can "test" all the four CRUD operations programmatically using, for example, the Request package.**
 
 I would make a file for testing it with mocha, and put it in the `test` folder in the root of the project.
 
@@ -305,7 +305,7 @@ describe("Verify the Joke API", function () {
 
 ```
 
->**Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.**
+### **Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.**
 
 mocha is a good way to test your JS code in Node. By making your test in the *test* folder, you can simply call mocha by using the `mocha`command in the root of the project.
 
@@ -336,7 +336,7 @@ to test async code you can simply make use of async/await annotation like above,
 ```
 
 
->**Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.**
+### **Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.**
 
 Mocking is a way of imitating an endpoints behaviore, whitout ever making a call to the endpoint itself. the is done by setting up nock to point trafic to a specific endpoint to returning some kind of object.
 
@@ -363,14 +363,14 @@ describe('swapiModule Get person', function () {
 });
 ```
 
->**Explain, preferably using an example, how you have deployed your node/Express applications, and which of the Express Production best practices you have followed.**
+### **Explain, preferably using an example, how you have deployed your node/Express applications, and which of the Express Production best practices you have followed.**
 
 Like explained previously i would have used nginx.
 
 also i would make sure to diable all print statements, because they are blocking, and maybe set up a debug mode if needed. Also i would add logging. For DB i would use MongoDB with mongoose.
 
 ## NoSQL, MongoDB and Mongoose
->**Explain, generally, what is meant by a NoSQL database.**
+### **Explain, generally, what is meant by a NoSQL database.**
 
 A NoSQL database is a database that doesn't use SQL to persist data.
 
@@ -387,12 +387,12 @@ A NoSQL database is a database that doesn't use SQL to persist data.
 - Stores redundant data
 - Not perfectly consistent with data.
 
->**Explain reasons to add a layer like Mongoose, on top on of a schema-less database like MongoDB**
+### **Explain reasons to add a layer like Mongoose, on top on of a schema-less database like MongoDB**
 
 Since MongoDB on its own is schemaless, which can cause some troubles, using a layer on top like mongoose makes it possible also to reference documents in other collections inside a document.
 
 #### These two topics will be introduced in period-3
->**Explain about indexes in MongoDB, how to create them, and demonstrate how you have used them.**
+### **Explain about indexes in MongoDB, how to create them, and demonstrate how you have used them.**
 
 Indexes are a way to uptimize querying a collection in MongoDB. When using indexes in mongoDB it creates a mapping of indexes under the surface, making it much faster to find a matching an index, rather than iteration all documents in a collection to check the values:
 
@@ -402,11 +402,11 @@ db.collection.createIndex( { name: -1 } )
 ```
 here the index is decending.
 
->**Explain, using your own code examples, how you have used some of MongoDB's "special" indexes like TTL and 2dsphere**
+### **Explain, using your own code examples, how you have used some of MongoDB's "special" indexes like TTL and 2dsphere**
 
 *Waiting for flow3 to answer this...*
 
->**Demonstrate, using a REST-API you have designed, how to perform all CRUD operations on a MongoDB**
+### **Demonstrate, using a REST-API you have designed, how to perform all CRUD operations on a MongoDB**
 
 ```
 class UserFacade {
@@ -432,12 +432,12 @@ class UserFacade {
 
 ```
 
->**Explain the benefits of using Mongoose, and demonstrate, using your own code, an example involving all CRUD operations**
+### **Explain the benefits of using Mongoose, and demonstrate, using your own code, an example involving all CRUD operations**
 
 
 Done above??
 
->**Explain the “6 Rules of Thumb: Your Guide Through the Rainbow” as to how and when you would use normalization vs. denormalization.**
+### **Explain the “6 Rules of Thumb: Your Guide Through the Rainbow” as to how and when you would use normalization vs. denormalization.**
 
 1. **favor embedding unless there is a compelling reason not to**
  - It is much faster to get a result when the DB doesn't have to join documents, and therefore your starting point should allways be to imbed unless you have good reasons not to.
@@ -461,7 +461,7 @@ Done above??
 	- Again: Think of the real-life write/read ratio when making decitions in the designing phase.
 
 
->**Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization**
+### **Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization**
 
 When desinging the *mini-project* we made a decition to not imbed a position in one Schema, and to not imbed it in another. This was because our LocationBlog collection would need frequent position updates, whereas our Users position would change constantly:
 
@@ -527,7 +527,7 @@ module.exports = mongoose.model("Position",PositionSchema);
 ```
 
 
->**Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the production database)**
+### **Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the production database)**
 
 "Like explained previously i would have used nginx.
 
