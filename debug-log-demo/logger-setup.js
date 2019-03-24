@@ -16,20 +16,20 @@ var logger = winston.createLogger({
             maxFiles: 5,
             colorize: false
         }),
-        new winston.transports.Console({
-            level: 'debug',
-            handleExceptions: true,
-            json: false,
-            colorize: true
-        })
+        // new winston.transports.Console({
+        //     level: 'debug',
+        //     handleExceptions: true,
+        //     json: false,
+        //     colorize: true
+        // })
     ],
     exitOnError: false
 })
 
-logger.stream = {
-    write: function (message, encoding) {
-        logger.info(message);
-    }
-};
+// logger.stream = {
+//     write: function (message, encoding) {
+//         logger.info(message);
+//     }
+// };
 
 module.exports = logger;
